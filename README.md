@@ -27,6 +27,10 @@ Créer le dossier `/mobile`.
 
 (Inspiré de : https://github.com/markmarijnissen/webpack-cordova-plugin)
 
+Installer le module `replace` :
+
+> npm install --save-dev replace
+
 Créer le dossier `/webpack_plugins`.
 
 Y créer un fichier `cordova.js` :
@@ -152,6 +156,24 @@ WebpackCordovaPlugin.prototype.apply  = function(compiler){
 };
 
 module.exports = WebpackCordovaPlugin;
+```
+
+Et créer le fichier `default-cordova-config.xml` :
+
+
+```
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hello" version="0.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloCordova</name>
+    <description>
+      Webpack generated Cordova App
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html"/>
+    <access origin="*" />
+</widget>
 ```
 
 

@@ -4,6 +4,7 @@ const gutil = require('gulp-util');
 const webpack = require('webpack');
 const webpackConf = require('../conf/webpack.conf');
 const webpackDistConf = require('../conf/webpack-dist.conf');
+const webpackMobileConf = require('../conf/webpack-mobile.conf');  
 
 gulp.task('webpack:dev', done => {
   webpackWrapper(false, webpackConf, done);
@@ -15,6 +16,10 @@ gulp.task('webpack:watch', done => {
 
 gulp.task('webpack:dist', done => {
   webpackWrapper(false, webpackDistConf, done);
+});
+
+gulp.task('webpack:mobile', done => {
+  webpackWrapper(true, webpackMobileConf, done);
 });
 
 function webpackWrapper(watch, conf, done) {
