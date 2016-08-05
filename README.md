@@ -239,7 +239,7 @@ Un fichier `config.xml` a été créé dans le dossier `mobile`.
 
 Ajouter la plateforme android :
 > cd mobile
-> cordova platforms add android
+> cordova platforms add android --save
 
 Lancer l'application :
 > cd mobile
