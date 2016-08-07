@@ -1,14 +1,9 @@
-import {ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED} from '../constants/ActionTypes';
+import {ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED} from '../../../actions'
 
-const initialState = [
-  {
-    text: 'Use Redux',
-    completed: false,
-    id: 0
-  }
-];
+export const initialState = [];
+export const defaultAction = { type: 'UNKOWN_ACTION' }
 
-export default function todos(state = initialState, action) {
+export default (state = initState, action = defaultAction) => {
   switch (action.type) {
     case ADD_TODO:
       return [
@@ -51,5 +46,25 @@ export default function todos(state = initialState, action) {
 
     default:
       return state;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+​
+export default (state = initState, action = defaultAction) => {
+  switch (action.type) {
+    case SET_LAYOUTS: return [...action.layouts]
+    case ADD_LAYOUT: return [...state, action.layout]
+    default: return state
   }
 }

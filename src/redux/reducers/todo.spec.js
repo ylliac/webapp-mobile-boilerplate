@@ -1,5 +1,5 @@
 import todos from './todos';
-import * as types from '../constants/ActionTypes';
+import {ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED} from '../../../actions';
 
 describe('todos reducer', () => {
   it('should handle initial state', () => {
@@ -17,7 +17,7 @@ describe('todos reducer', () => {
   it('should handle ADD_TODO', () => {
     expect(
       todos([], {
-        type: types.ADD_TODO,
+        type: ADD_TODO,
         text: 'Run the tests'
       })
     ).toEqual([
@@ -36,7 +36,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.ADD_TODO,
+        type: ADD_TODO,
         text: 'Run the tests'
       })
     ).toEqual([
@@ -63,7 +63,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.ADD_TODO,
+        type: ADD_TODO,
         text: 'Fix the tests'
       })
     ).toEqual([
@@ -96,7 +96,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.DELETE_TODO,
+        type: DELETE_TODO,
         id: 1
       })
     ).toEqual([
@@ -121,7 +121,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.EDIT_TODO,
+        type: EDIT_TODO,
         text: 'Fix the tests',
         id: 1
       })
@@ -151,7 +151,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.COMPLETE_TODO,
+        type: COMPLETE_TODO,
         id: 1
       })
     ).toEqual([
@@ -180,7 +180,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.COMPLETE_ALL
+        type: COMPLETE_ALL
       })
     ).toEqual([
       {
@@ -207,7 +207,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.COMPLETE_ALL
+        type: COMPLETE_ALL
       })
     ).toEqual([
       {
@@ -235,7 +235,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.CLEAR_COMPLETED
+        type: CLEAR_COMPLETED
       })
     ).toEqual([
       {
@@ -250,12 +250,12 @@ describe('todos reducer', () => {
     expect(
       [
         {
-          type: types.COMPLETE_TODO,
+          type: COMPLETE_TODO,
           id: 0
         }, {
-          type: types.CLEAR_COMPLETED
+          type: CLEAR_COMPLETED
         }, {
-          type: types.ADD_TODO,
+          type: ADD_TODO,
           text: 'Write more tests'
         }
       ].reduce(todos, [

@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
-import TodoTextInput from './TodoTextInput';
+
+import TodoTextInput from '../common/TodoTextInput';
 
 class Header extends Component {
   constructor(props) {
