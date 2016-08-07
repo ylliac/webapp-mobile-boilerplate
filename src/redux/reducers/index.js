@@ -1,10 +1,9 @@
-import { combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form'
+import {combineReducers} from 'redux';
 
-​import todo from './todo'
-​
+import todos from './todo';
+
 const reducers = combineReducers({
-  todo
-})
-​
-export default reducers
+  todos
+});
+
+export default reducers;

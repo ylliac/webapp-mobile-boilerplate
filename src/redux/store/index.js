@@ -4,7 +4,7 @@ import { routerMiddleware } from 'react-router-redux'
 import thunkMiddleware from 'redux-thunk'
 import reducers from '../reducers'
 import initState from './init'
-​
+
 const routeMiddleware = routerMiddleware(browserHistory)
 const store = createStore(
   reducers,
@@ -14,5 +14,5 @@ const store = createStore(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 )
-​​​
+
 export default store

@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 import Header from './Header';
 import MainSection from './MainSection';
 
-import * as actionCreators from '../redux/actions';
+import * as actionCreators from '../../redux/actions';
 
-class App extends Component {
+class TodoApp extends Component {
   render() {
     const {todos, actions} = this.props;
     return (
@@ -24,7 +24,7 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+TodoApp.propTypes = {
   todos: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 };
@@ -44,4 +44,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(TodoApp);

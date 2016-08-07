@@ -1,6 +1,6 @@
-import {ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED} from '../../../actions'
+import {ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED} from '../actions'
 
-export const initialState = [];
+export const initState = [];
 export const defaultAction = { type: 'UNKOWN_ACTION' }
 
 export default (state = initState, action = defaultAction) => {
@@ -46,25 +46,5 @@ export default (state = initState, action = defaultAction) => {
 
     default:
       return state;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-​
-export default (state = initState, action = defaultAction) => {
-  switch (action.type) {
-    case SET_LAYOUTS: return [...action.layouts]
-    case ADD_LAYOUT: return [...state, action.layout]
-    default: return state
   }
 }
