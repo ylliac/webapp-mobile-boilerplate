@@ -1,10 +1,10 @@
 
-TODO 
-Utiliser create-react-app : https://github.com/facebookincubator/create-react-app
-Ajouter cordova comme suit : http://wp.hthieu.com/?p=447
-Ajouter redux, router....
-
-
+TODO   
+Utiliser create-react-app : https://github.com/facebookincubator/create-react-app   
+Ajouter cordova comme suit : http://wp.hthieu.com/?p=447   
+Ajouter redux, router....   
+   
+   
 # Mise en place du Squelette de projet
 
 
